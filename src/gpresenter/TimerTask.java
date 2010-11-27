@@ -5,10 +5,6 @@
 
 package gpresenter;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.InputStreamReader;
 import javafx.async.RunnableFuture;
 
 /**
