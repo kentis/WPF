@@ -7,20 +7,10 @@ package gpresenter;
 
 import java.io.File;
 import java.lang.Process;
-import org.omg.SendingContext.RunTime;
 import javafx.scene.image.Image;
 import java.lang.System;
 import java.util.Date;
-import java.text.SimpleDateFormat;
-import javafx.lang.Duration;
-import java.lang.Runnable;
-import java.lang.Thread;
-import gpresenter.TimerTask;
 import gpresenter.TimerTaskBase;
-import java.io.InputStreamReader;
-import java.io.BufferedInputStream;
-import java.nio.CharBuffer;
-import java.lang.CharSequence;
 import gpresenter.IOUtils;
 
 /**
@@ -128,6 +118,4 @@ public class PresenterModel {
     public function updateTime(time:String){
         timer = time;
     }
-
-
 }
