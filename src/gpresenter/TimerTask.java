@@ -35,7 +35,16 @@ public class TimerTask implements RunnableFuture{
             long minutes = diff % 60;
             long hours = diff / 60;
             StringBuilder sb = new StringBuilder();
-            sb.append(hours).append(":").append(minutes).append(":").append(seconds);
+
+            if(hours < 10) sb.append("0");
+            sb.append(hours).append(":");
+
+            if(hours < 10) sb.append("0");
+            sb.append(minutes).append(":");
+
+            if(seconds < 10) sb.append("0");
+            sb.append(seconds);
+
             listener.callback(sb.toString());
             Thread.sleep(100);
             
