@@ -43,12 +43,7 @@ public class PresenterModel {
 
     public function next(){
         if(currentSlide < maxFiles){
-            if(windowId == null or windowId == ""){
-                var proc = java.lang.Runtime.getRuntime().exec("xwininfo -root -tree");
-                proc.waitFor();
-                windowId = IOUtils.readLine(proc.getInputStream(),"gpres_{startTime}");
-                System.out.println("windowId: {windowId}")
-           }
+            setWindowId();
            //System.out.println("xdotool type --window {windowId} j");
             var proc2 = java.lang.Runtime.getRuntime().exec("xdotool type --window {windowId} j");
             proc2.waitFor();
@@ -61,6 +56,31 @@ public class PresenterModel {
             }
 
         }
+    }
+
+    function setWindowId(){
+        if(windowId == null or windowId == ""){
+                var proc = java.lang.Runtime.getRuntime().exec("xwininfo -root -tree");
+                proc.waitFor();
+                windowId = IOUtils.readLine(proc.getInputStream(),"gpres_{startTime}");
+           }
+    }
+
+    public function previous(){
+        if(currentSlide >= 1){
+            setWindowId();
+        
+
+        var proc2 = java.lang.Runtime.getRuntime().exec("xdotool type --window {windowId} h");
+            proc2.waitFor();
+            currentSlide--;
+            currentImage = Image {
+                url: "file:///tmp/gpresent/slides/slide-{currentSlide}.png"
+            }
+            nextImage = Image {
+                url: "file:///tmp/gpresent/slides/slide-{currentSlide + 1}.png"
+            }
+       }
     }
 
 
@@ -90,7 +110,7 @@ public class PresenterModel {
 
         startTime = System.currentTimeMillis();
 
-        evinceInstance = java.lang.Runtime.getRuntime().exec("evince -s --name=gpres_{startTime} {fileName}");
+        evinceInstance = java.lang.Runtime.getRuntime().exec("evince -p 0 -s --name=gpres_{startTime} {fileName}");
 
 
         var timer = TimerTaskBase{
@@ -118,4 +138,9 @@ public class PresenterModel {
     public function updateTime(time:String){
         timer = time;
     }
+
+    public function close(){
+        evinceInstance.destroy();
+    }
+
 }
