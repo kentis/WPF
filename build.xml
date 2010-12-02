@@ -2,8 +2,8 @@
 <!-- You may freely edit this file. See commented blocks below for -->
 <!-- some examples of how to customize the build. -->
 <!-- (If you delete it and reopen the project it will be recreated.) -->
-<project name="gPresenter" default="default" basedir=".">
-    <description>Builds, tests, and runs the project gPresenter.</description>
+<project name="wpf" default="default" basedir=".">
+    <description>Builds, tests, and runs the project wpf.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 
@@ -32,7 +32,7 @@
 
     An example of overriding the target for project execution could look like this:
 
-        <target name="run" depends="gPresenter-impl.jar">
+        <target name="run" depends="wpf-impl.jar">
             <exec dir="bin" executable="launcher.exe">
                 <arg file="${dist.jar}"/>
             </exec>

@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package gpresenter;
+package wpf;
 
 import java.io.BufferedReader;
 import java.io.IOException;

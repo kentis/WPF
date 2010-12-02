@@ -3,15 +3,15 @@
  * and open the template in the editor.
  */
 
-package gpresenter;
+package wpf;
 
 import java.io.File;
 import java.lang.Process;
 import javafx.scene.image.Image;
 import java.lang.System;
 import java.util.Date;
-import gpresenter.TimerTaskBase;
-import gpresenter.IOUtils;
+import wpf.TimerTaskBase;
+import wpf.IOUtils;
 
 /**
  * @author kent

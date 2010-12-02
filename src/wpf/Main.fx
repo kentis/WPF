@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package gpresenter;
+package wpf;
 
 import javafx.stage.Stage;
 import javafx.scene.Scene;

@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package gpresenter;
+package wpf;
 
 import javafx.async.JavaTaskBase;
 import java.lang.UnsupportedOperationException;
