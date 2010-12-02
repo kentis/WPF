@@ -1,4 +1,5 @@
 /*
+ *  Copyright (C) 2010 Kent Inge F. Simonsen.
  *  This file is part of Windowed Presentation Frame (WPF).
  *
  *  WPF is free software: you can redistribute it and/or modify
