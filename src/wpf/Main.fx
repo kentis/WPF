@@ -154,7 +154,7 @@ var scene = SizeBoundingScene {
         }
 
 Stage {
-    title: "GPresenter"
+    title: "Windowed Presentation Frame"
     scene: scene
     onClose: function() {
         model.close();
